@@ -5,7 +5,7 @@ endif
 let g:loaded_openai_codeImprove = 1
 
 " Get base path
-let s:pluginName = "vim_openai_codeImprove"
+let s:pluginName = "vim-openai-codeImprove"
 
 if !empty(glob($HOME . "/.vim/plugged/" . s:pluginName . "/plugin"))
     let s:path = $HOME . "/.vim/plugged/" . s:pluginName . "/plugin"
