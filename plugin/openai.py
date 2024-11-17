@@ -39,9 +39,7 @@ def optimize_selected_code():
                 'content': prompt,
             },
         ],
-        'max_tokens': 500,
-        'temperature': 0.7,
-        'n': 1
+#        'max_tokens': 500
     }
 
 
