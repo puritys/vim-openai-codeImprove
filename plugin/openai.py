@@ -32,7 +32,7 @@ def optimize_selected_code():
         'messages': [
             {
                 'role': 'system',
-                'content': 'you are a profession engineer'
+                'content': 'you are a professional engineer'
             },
             {
                 'role': 'user',

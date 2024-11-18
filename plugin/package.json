@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "axios": "^1.7.7",
+    "esbuild": "^0.24.0",
+    "glob": "^11.0.0",
+    "neovim": "^5.3.0",
+    "tsc-watch": "^6.2.1"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "node esbuild.js"
+  },
+  "type": "module"
+}
