@@ -49,6 +49,6 @@ else
         endif
         call delete(s:tmpFile)
     endfunction
-    xnoremap <silent> <Leader>ai :<C-U>call OptimizeSelectedCode()<CR>
+    xnoremap <silent> <Leader>ai :<C-U>call OptimizeSelectedCode()<CR><CR>
 
 endif
