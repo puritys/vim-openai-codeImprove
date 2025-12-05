@@ -22,9 +22,16 @@ if exists('g:vim_openai_codeImprove_usePython3') && g:vim_openai_codeImprove_use
 
 else
     let s:file= s:path . "/dist/openai.js"
+    let s:apiKeyFile = "~/.openai_api_key"
+
+    if exists('g:vim_openai_codeImprove_enableGemini') && g:vim_openai_codeImprove_enableGemini == "1"
+        let s:file= s:path . "/dist/gemini.js"
+        let s:apiKeyFile = "~/.gemini_api_key"
+    endif
+
     let s:tmpFile = "/tmp/vim-openai-codeImprove-tmp.txt"
     function! OptimizeSelectedCode()
-        echom "Waiting (need ~/.openai_api_key)... start to call openAI about how to improve code."
+        echom "Waiting (need " . s:apiKeyFile . ")... start to call openAI about how to improve code."
 
         " Store the visual selection in a variable
         let l:start = getpos("'<")
