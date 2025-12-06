@@ -31,7 +31,7 @@ else
 
     let s:tmpFile = "/tmp/vim-openai-codeImprove-tmp.txt"
     function! OptimizeSelectedCode()
-        echom "Waiting (need " . s:apiKeyFile . ")... start to call openAI about how to improve code."
+        echom "Waiting (need " . s:apiKeyFile . ")... start to ask AI about how to improve code."
 
         " Store the visual selection in a variable
         let l:start = getpos("'<")

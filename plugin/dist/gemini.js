@@ -36851,7 +36851,7 @@ var apiKey = import_fs2.default.readFileSync(homePath, "utf8").trim();
 var ai = new GoogleGenAI({ apiKey });
 async function optimizeSelectedCode(selectedCode2) {
   const model = "gemini-2.5-flash";
-  const prompt = "You are a professional engineer, Please optimize the following code:\n" + selectedCode2;
+  const prompt = "You are a professional engineer, Please optimize the following code and provide short response:\n" + selectedCode2;
   try {
     const response = await ai.models.generateContent({
       model,
@@ -36859,7 +36859,7 @@ async function optimizeSelectedCode(selectedCode2) {
     });
     return response.text;
   } catch (error) {
-    console.error(`Error: Request failed with status code ${error.response ? error.response.status : "unknown"}`);
+    console.error(`Error: Request failed  ${error}`);
     return "";
   }
 }

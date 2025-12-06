@@ -11,7 +11,7 @@ async function optimizeSelectedCode(selectedCode: string): Promise<string> {
 
 
     const model: string = 'gemini-2.5-flash';
-    const prompt: string = 'You are a professional engineer, Please optimize the following code:\n' + selectedCode;
+    const prompt: string = 'You are a professional engineer, Please optimize the following code and provide short response:\n' + selectedCode;
 
     try {
         const response = await ai.models.generateContent({
@@ -21,7 +21,7 @@ async function optimizeSelectedCode(selectedCode: string): Promise<string> {
 
         return response.text;
     } catch (error: any) {
-        console.error(`Error: Request failed with status code ${error.response ? error.response.status : 'unknown'}`);
+        console.error(`Error: Request failed  ${error}`);
         return '';
     }
 }
